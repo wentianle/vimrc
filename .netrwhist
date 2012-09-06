@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/wtl/git/vim/TabBar'
+let g:netrw_dirhist_2='/opt/ucloud/uwebsite/static/js/libs/slickgird'
+let g:netrw_dirhist_3='/opt/ucloud/uwebsite/system/config/local'

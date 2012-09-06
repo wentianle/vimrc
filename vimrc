@@ -40,8 +40,8 @@ imap <C-t> <esc> <cr>
 set wildignore+=.git,.svn,*.o,*.ob­j,tmp,*swp,*.log
 let g:CommandTMaxFiles = 25000
 " else
-"     map <C-t> :NERDTreeToggle<cr>
-"     imap <C-t> <esc>:NERDTreeToggle<cr>
+    " map <C-t> :NERDTreeToggle<cr>
+    " imap <C-t> <esc>:NERDTreeToggle<cr>
 " endif 
 
 map <C-j> <C-W>j 
@@ -71,3 +71,14 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+set tags=~/tags
